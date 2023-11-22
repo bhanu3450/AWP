@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculaor</title>
+</head>
+
+<body>
+    <center>
+        <table style="width: 600px;">
+            <thead>
+                <tr><b>
+                        <h1 onmouseover="unhide()" onmouseout="hide()"><u>Calculator</u></h1>
+                    </b></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2">Enter Number 1</td>
+                    <td colspan="2">
+                        <input type="number" id="1" placeholder="Only enter numbers">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">Enter Number 2</td>
+                    <td colspan="2">
+                        <input type="number" id="2" placeholder="Only enter numbers"
+                            title="press no.s on your keyboard">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">Result</td>
+                    <td colspan="2" style="border: 1px;">
+                        <!-- <div id="3"></div> -->
+                        <input type="number" id="3" placeholder="Result">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="Addition" onclick="Addition()"></td>
+                    <td><input type="button" value="Subtraction" onclick="Subtraction()"></td>
+                    <td><input type="button" value="Multiplicaion" onclick="Multiplicaion()"></td>
+                    <td><input type="button" value="Division" onclick="Division()"></td>
+                </tr>
+                <tr>
+                    <td colspan="4"><input type="button" value="GoToW3Schools" style="display: none;" onclick=ph() id="4"></td>
+                </tr>
+                <!-- <tr>
+                    <td colspan="4">
+                     <input type="button" value="Unhide" id="5" onclick="unhide()">
+                    </td>
+                </tr> -->
+            </tbody>
+        </table>
+    </center>
+    <script>
+        function Addition() {
+            var refToNum1 = document.getElementById(1);
+            var refToNum2 = document.getElementById(2);
+            var result = parseInt(refToNum1.value) + parseInt(refToNum2.value);
+            var refToResult = document.getElementById(3);
+            refToResult.value = result;
+            // refToResult.innerHTML = result;
+        }
+        function Subtraction() {
+            var refToNum1 = document.getElementById(1);
+            var refToNum2 = document.getElementById(2);
+            var result = refToNum1.value - refToNum2.value;
+            var refToResult = document.getElementById(3);
+            refToResult.value = result;
+            // refToResult.innerHTML = result;
+        }
+        function Multiplicaion() {
+            var refToNum1 = document.getElementById(1);
+            var refToNum2 = document.getElementById(2);
+            var result = refToNum1.value * refToNum2.value;
+            var refToResult = document.getElementById(3);
+            refToResult.value = result;
+            // refToResult.innerHTML = result;
+        }
+        function Division() {
+            var refToNum1 = document.getElementById(1);
+            var refToNum2 = document.getElementById(2);
+            var result = refToNum1.value / refToNum2.value;
+            var refToResult = document.getElementById(3);
+            refToResult.value = result;
+            // refToResult.innerHTML = result;
+        }
+        function ph() {
+            // document.location = "https://www.w3schools.com/js/default.asp";
+            window.open("https://www.w3schools.com/js/default.asp");
+        }
+        function unhide(){
+            var refToUnhide = document.getElementById(4);
+            refToUnhide.style.display = "flex";
+        }
+        function hide(){
+            var refToUnhide = document.getElementById(4);
+            refToUnhide.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
